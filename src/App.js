@@ -35,14 +35,15 @@ const App = () => {
     }
 
     return(
-        <div className="App">
-            <form onSubmit={getSearch} className="search-bar">
+        <div className="App container">
+            <form onSubmit={getSearch} className="search-from">
                 <input className="search-bar" type="text" 
                     value={search} 
                     onChange={updateSearch}/>
                 <button className="search-button" type="submit">Search</button>
             </form>
             {/* <h1 onClick={()=>setCounter(counter+1)}>{counter}</h1> */}
+            <div className="recipes row">
             {
                 recipes.map((recipe,i)=>(
                     <Recipe key={i} title={recipe.recipe.label}
@@ -52,6 +53,7 @@ const App = () => {
                     />
                 ))
             }
+            </div>
         </div>
     )
 }
