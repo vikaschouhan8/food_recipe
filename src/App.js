@@ -39,7 +39,8 @@ const App = () => {
             <form onSubmit={getSearch} className="search-from">
                 <input className="search-bar" type="text" 
                     value={search} 
-                    onChange={updateSearch}/>
+                    onChange={updateSearch}
+                    placeholder="eg: banana,.."/>
                 <button className="search-button" type="submit">Search</button>
             </form>
             {/* <h1 onClick={()=>setCounter(counter+1)}>{counter}</h1> */}
